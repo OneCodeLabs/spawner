@@ -1,0 +1,20 @@
+{
+  "name": "spawner",
+  "version": "1.0.0",
+  "description": "spawner game",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build src/index.html",
+    "deploy": "./publish.sh dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git-personal:goodengineer/spawner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.9.3"
+  }
+}
