@@ -13,4 +13,4 @@ npm run deploy
 whatever is in the dist folder, at the moment you run this command, is going to be published. make sure you build before deploying.
 
 ## url
-some seconds after deployment, the changes should be visible at [goodengineer.github.io/spawner](goodengineer.github.io/spawner)
+some seconds after deployment, the changes should be visible at http://goodengineer.github.io/spawner
