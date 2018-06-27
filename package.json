@@ -4,6 +4,7 @@
   "description": "spawner game",
   "main": "index.js",
   "scripts": {
+    "buildConstantly": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "deploy": "./publish.sh dist"
   },
