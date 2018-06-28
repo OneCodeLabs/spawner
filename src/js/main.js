@@ -1,13 +1,22 @@
-const { createGame } = require('./utils')
-const { spawn } = require('./actions')
+const { initBoard } = require('./board')
+const { spawn, move } = require('./actions')
 
-let game = createGame()
+let createGame = () => ({
+  turn: 1,
+  energyLeft: 5,
+  board: initBoard()
+})
 
-game = spawn (game)
-game = spawn (game)
+// game = spawn (game)
+// game = move (0, 3) (1, 3) (game)
 
-console.log(game)
+window.App = {
+  start: () => {
+    console.log('app running!')
+    this.game = createGame()
+  }
+}
 
 window.addEventListener('load', () => {
-  console.log('app running!')
+  App.start()
 })

@@ -1,11 +1,5 @@
 const { SPAWNER_0, SPAWNER_1, ROWS, COLUMNS, CELL_EMPTY } = require('./constants')
 
-const whoPlays = game => (game.turn + 1) % 2
-
-const getSpawner = player => player === 0 ? SPAWNER_0 : SPAWNER_1
-
-const startingEnergy = turn => Math.floor(3 + turn/2)
-
 const initBoard = () => {
   const board = []
   for (let i = 0; i < ROWS; i++) {
@@ -18,15 +12,9 @@ const initBoard = () => {
   return board
 }
 
-let createGame = () => ({
-  turn: 1,
-  board: initBoard()
-})
+const getSpawner = player => player === 0 ? SPAWNER_0 : SPAWNER_1
 
 module.exports = {
-  whoPlays,
-  getSpawner,
-  startingEnergy,
   initBoard,
-  createGame
+  getSpawner
 }

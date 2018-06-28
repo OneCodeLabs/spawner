@@ -1,0 +1,11 @@
+#board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  width: calc(100%/8);
+  height: 16px;
+  background: black;
+  margin: 2px;
+}
