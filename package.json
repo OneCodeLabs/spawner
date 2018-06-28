@@ -6,7 +6,7 @@
   "scripts": {
     "buildConstantly": "rm -rf dist; parcel src/index.html",
     "build": "rm -rf dist; parcel build src/index.html",
-    "deploy": "./publish.sh dist"
+    "deploy": "firebase deploy"
   },
   "repository": {
     "type": "git",
