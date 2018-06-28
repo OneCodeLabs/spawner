@@ -3,7 +3,7 @@ const { canSpawn } = require('./validations')
 const { CELL_UNIT } = require('./constants')
 
 const spawn = game => {
-  if (!canSpawn) {
+  if (!canSpawn (game)) {
     // shit happens
     console.error("can't spawn");
     return game
@@ -13,6 +13,7 @@ const spawn = game => {
 
   const nextGame = {...game}
   nextGame.board[spawner[0]][spawner[1]] = CELL_UNIT (whoPlays (game))
+  nextGame.turn++
   return nextGame
 }
 

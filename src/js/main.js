@@ -1,16 +1,12 @@
+const { createGame } = require('./utils')
+const { spawn } = require('./actions')
 
-let game = {
-  turn: 1,
-  board: initBoard()
-}
+let game = createGame()
 
 game = spawn (game)
+game = spawn (game)
 
-const startingEnergy = turn => Math.floor(3 + turn/2)
-
-const initBoard = () => {
-
-}
+console.log(game)
 
 window.addEventListener('load', () => {
   console.log('app running!')

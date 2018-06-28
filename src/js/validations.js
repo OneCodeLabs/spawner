@@ -7,5 +7,5 @@ const canSpawn = game => {
 }
 
 module.exports = {
-
+  canSpawn
 }
