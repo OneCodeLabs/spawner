@@ -15,6 +15,8 @@ body {
   grid-template-columns: repeat(7, 1fr);
   grid-gap: 8px;
   padding: 16px;
+  border-radius: 4px;
+  margin: 16px;
 }
 
 .cell {
@@ -23,6 +25,10 @@ body {
   background: white;
   border-radius: 4px;
   transition: all 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell:hover {
@@ -31,13 +37,42 @@ body {
   cursor: pointer;
 }
 
+.cell .u0, .cell .u1 {
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+}
+
+.cell .u0 {
+  background: rgb(125, 125, 255);
+}
+
+.cell .u1 {
+  background: rgb(255, 125, 125);
+}
+
+.cell.c0-3, .cell.c7-3 {
+  background: rgba(200, 255, 200, 0.7);
+}
+
+.cell.c2-1, .cell.c5-5 {
+  background: rgba(255, 215, 0, 0.7);
+}
+
+.cell.marked-0 {
+  box-shadow: 0 0 2px 2px blue;
+}
+
+.cell.marked-1 {
+  box-shadow: 0 0 2px 2px red;
+}
+
 .spawn-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
   height: 40px;
-  margin: 8px;
   background: white;
   border-radius: 4px;
   box-shadow: 0 0 1px 1px black;
@@ -47,4 +82,8 @@ body {
 .spawn-btn:hover {
   box-shadow: 0 0 2px 2px black;
   cursor: pointer;
+}
+
+#end-turn {
+  margin-top: 8px;
 }

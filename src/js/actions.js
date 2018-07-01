@@ -19,12 +19,13 @@ const spawn = game => {
 const endTurn = game => {
   const nextGame = {...game}
   nextGame.turn++
-  nextGame.energyLeft = startingEnergy (nextGame)
+  nextGame.energyLeft = startingEnergy (nextGame.turn)
   return nextGame
 }
 
 const attack = (fromI, fromJ) => (toI, toJ) => game => {
-
+  console.error('attack is not implemented yet');
+  return game
 }
 
 const move = (fromI, fromJ) => (toI, toJ) => game => {
@@ -42,5 +43,6 @@ const move = (fromI, fromJ) => (toI, toJ) => game => {
 module.exports = {
   spawn,
   attack,
-  move
+  move,
+  endTurn
 }
